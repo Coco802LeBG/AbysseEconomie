@@ -675,7 +675,7 @@ public class AbyssEconomy extends JavaPlugin implements Listener, CommandExecuto
         void click(Player p, int slot, ClickType type) {
             if (slot == 11) {
                 purchase(p, listing);
-                getServer().getScheduler().runTask(AbyssEconomy.this, p::closeInventory);
+                getServer().getScheduler().runTask(AbyssEconomy.this, () -> p.closeInventory());
             } else if (slot == 15) {
                 open(p, new AhGui(back.page, back.sort, back.filter));
             }
@@ -792,7 +792,7 @@ public class AbyssEconomy extends JavaPlugin implements Listener, CommandExecuto
             }
             add(p.getUniqueId(), total);
             p.sendMessage(P + "You sold §f" + count + " items §7for §a" + money(total));
-            getServer().getScheduler().runTask(AbyssEconomy.this, p::closeInventory);
+            getServer().getScheduler().runTask(AbyssEconomy.this, () -> p.closeInventory());
         }
 
         void handleClick(Player p, InventoryClickEvent e) {
