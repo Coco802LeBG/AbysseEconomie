@@ -1,0 +1,78 @@
+# ===== Abyss Economy =====
+market:
+  elasticity: 0.6        # force de l'offre/demande pour le prix de /sell
+  sell-ratio: 0.80       # /sell = prix du marche x 0.80
+  cycle-minutes: 10      # le marche "vit" toutes les X minutes
+  drift: 0.03            # retour naturel du stock vers l'equilibre a chaque cycle
+  event-chance: 0.35     # chance d'un evenement (boom / surproduction) par cycle
+inflation:
+  money-scale: 2000000   # plus la masse monetaire est grande, plus les prix montent
+  daily-growth: 0.01     # +1% par jour depuis le lancement du serveur
+player:
+  start-balance: 1000
+ah:
+  tax: 0.05              # taxe sur chaque vente (argent detruit = anti-inflation)
+  duration-hours: 48     # duree d'une annonce
+  max-listings: 15       # annonces max par joueur
+
+# base = prix de depart, target = stock d'equilibre (moins il y en a, plus c'est cher)
+items:
+  OAK_LOG:            {base: 1.5,    target: 10000}
+  SUGAR_CANE:         {base: 2,      target: 6000}
+  COAL:               {base: 4,      target: 4000}
+  COPPER_INGOT:       {base: 3,      target: 6000}
+  IRON_INGOT:         {base: 10,     target: 3000}
+  GOLD_INGOT:         {base: 20,     target: 1800}
+  REDSTONE:           {base: 3,      target: 5000}
+  LAPIS_LAZULI:       {base: 4,      target: 5000}
+  EMERALD:            {base: 60,     target: 800}
+  DIAMOND:            {base: 150,    target: 500}
+  SHULKER_SHELL:      {base: 400,    target: 200}
+  BEACON:             {base: 4000,   target: 30}
+  TOTEM_OF_UNDYING:   {base: 2500,   target: 40}
+  ENCHANTED_GOLDEN_APPLE: {base: 5000, target: 20}
+  NETHERITE_INGOT:    {base: 3000,   target: 60}
+  ELYTRA:             {base: 8000,   target: 25}
+  NETHER_STAR:        {base: 10000,  target: 15}
+
+# /shop = "Quick Buy": 5 lignes de 9 (45 slots). "ITEM:quantite" ; "-" = case vide.
+# Cliquer un item ouvre l'AH filtre sur cet item, du moins cher au plus cher.
+shop:
+  quick-buy:
+    - "ELYTRA"
+    - "TOTEM_OF_UNDYING"
+    - "ENDER_PEARL:16"
+    - "END_CRYSTAL:64"
+    - "NETHERITE_INGOT:64"
+    - "DIAMOND:64"
+    - "EMERALD:64"
+    - "NETHER_STAR"
+    - "SHULKER_BOX"
+    - "NETHERITE_HELMET"
+    - "NETHERITE_CHESTPLATE"
+    - "NETHERITE_LEGGINGS"
+    - "NETHERITE_BOOTS"
+    - "NETHERITE_SWORD"
+    - "NETHERITE_PICKAXE"
+    - "NETHERITE_AXE"
+    - "TRIDENT"
+    - "BEACON"
+    - "OBSIDIAN:64"
+    - "GOLDEN_CARROT:64"
+    - "COOKED_BEEF:64"
+    - "GUNPOWDER:64"
+    - "FIREWORK_ROCKET:64"
+    - "EXPERIENCE_BOTTLE:64"
+    - "ANCIENT_DEBRIS:64"
+    - "RESPAWN_ANCHOR:64"
+    - "TNT:64"
+    - "SPAWNER"
+    - "ENCHANTED_BOOK"
+    - "WITHER_SKELETON_SKULL"
+    - "DRAGON_EGG"
+    - "HEART_OF_THE_SEA"
+    - "SHULKER_SHELL:64"
+    - "BLAZE_ROD:64"
+    - "ENDER_CHEST"
+    - "ANVIL"
+    - "ENCHANTED_GOLDEN_APPLE:64"

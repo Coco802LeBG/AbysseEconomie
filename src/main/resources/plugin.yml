@@ -1,0 +1,23 @@
+name: AbyssEconomy
+version: 1.1.0
+main: fr.abyss.economy.AbyssEconomy
+api-version: '1.21'
+description: Economie dynamique + hotel des ventes pour Abyss SMP
+commands:
+  balance:
+    aliases: [bal, money]
+    description: Voir ton argent
+  pay:
+    description: Envoyer de l'argent
+  baltop:
+    description: Menu Most Money
+  sell:
+    description: Ouvre le menu Sell
+  price:
+    description: Prix d'un item (serveur + hotel des ventes)
+  ah:
+    aliases: [auctionhouse, hdv]
+    description: Hotel des ventes (/ah, /ah <item>, /ah sell <prix>)
+  shop:
+    aliases: [quickbuy]
+    description: Quick Buy - acces rapide aux items les moins chers de l'AH
